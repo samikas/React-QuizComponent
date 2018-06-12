@@ -17,11 +17,15 @@ class Quiz extends Component{
         let result;
         return(
             <div>
-                if(isQuizEnd){
-                    result = ( <QuizEnd /> )
-                }else{
-                    result = ( <QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]}/> )
-                }   
+            return isQuizEnd ? (
+                <div>
+                  <QuizEnd />
+                </div>
+              ) : (
+                <div>
+                  <QuizQuestion quiz_question={quizData.quiz_questions[this.state.quiz_position - 1]} />
+                </div>
+              )   
             </div>
         )
     }
