@@ -23,7 +23,7 @@ class Quiz extends Component {
     const isQuizEnd = this.state.quiz_position - 1 === quizData.quiz_questions.length
     return isQuizEnd ? (
       <div>
-        <QuizEnd />
+        <QuizEnd resetClickHandler={this.handle}/>
       </div>
     ) : (
       <div>
